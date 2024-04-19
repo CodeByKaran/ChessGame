@@ -995,12 +995,26 @@ function PeiceCaught(Ids) {
     let e = Ids[i]
     alert(id.includes(e))
     alert(d.getElementById(e).hasChildNodes())
-    if(!id.includes(e)) continue;
-    if (!d.getElementById(e).hasChildNodes()) continue;
+    if(!(id.includes(e))){
+      alert("id wla")
+      continue;
+    }
+    if (!(d.getElementById(e).hasChildNodes()))
+    {
+      alert("elem wla")
+      continue;
+    }
     let src = d.getElementById(e).children[0].src
-    if (src[29] == prev_block.image[29]) continue;
+    alert(src)
+    if (src[29] == prev_block.image[29])
+    {
+      alert("src wla")
+      continue
+    };
     let block = document.getElementById(e);
+    alert(block)
     let span = document.createElement("span")
+    alert(span)
     //console.log(src)
     span.id = e;
     //console.log(prev_block.img_inf)
@@ -1012,6 +1026,7 @@ function PeiceCaught(Ids) {
     // Passing Queens Ids
    // console.log("run")
     if(((block.children[0].classList[1]).slice(1,))==="queen")
+      alert("kuch hai")
     Queen_Catched.id=block.id
     // Passing Here
     span.addEventListener("click",()=>EliminatePeice(block,prev_block.image))
