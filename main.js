@@ -361,7 +361,9 @@ function UndoMove(){
   //console.log("Normal Undo run")
  let block = document.getElementById(id);
   let image = document.createElement("img")
-  let img_src=("."+img.slice(21,))
+  let imgArr = img.split("/")
+  
+  let img_src=`./${imgArr[imgArr.length-2]}/${imgArr[imgArr.length-1]}`
   image.src = img_src;
   image.classList.add("images")
   let cls_L=Undo.cls.length;
