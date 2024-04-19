@@ -991,6 +991,7 @@ function EliminatePeice(block,src){
 //Checking Is PeiceCaught
 function PeiceCaught(Ids) {
   for (let i = 0; i < Ids.length; ++i) {
+    console.log(i)
     let e = Ids[i]
     if(!id.includes(e)) continue;
     if (!d.getElementById(e).hasChildNodes()) continue;
@@ -1004,6 +1005,8 @@ function PeiceCaught(Ids) {
     span.classList.add(prev_block.img_inf)
     block.classList.add("PeiceCaught")
     block.appendChild(span)
+    console.log(span)
+    console.log("run)
     // Passing Queens Ids
    // console.log("run")
     if(((block.children[0].classList[1]).slice(1,))==="queen")
