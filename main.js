@@ -1006,7 +1006,7 @@ function PeiceCaught(Ids) {
     block.classList.add("PeiceCaught")
     block.appendChild(span)
     console.log(span)
-    console.log("run)
+    console.log("run")
     // Passing Queens Ids
    // console.log("run")
     if(((block.children[0].classList[1]).slice(1,))==="queen")
