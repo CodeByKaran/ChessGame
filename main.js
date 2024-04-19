@@ -949,11 +949,11 @@ function CheckWin(){
   Queen_Catched.id=null
   let QueenId=d.getElementById(e).children[0].classList[1]
   if(QueenId==="bqueen"){
-  console.log("whites Win")
+  alert("whites Win")
   Queen_Catched.stop_game=true;
   }
   if(QueenId==="wqueen"){
-  console.log("blacks Win")
+  alert("blacks Win")
   Queen_Catched.stop_game=true;
   }
   
@@ -996,27 +996,25 @@ function PeiceCaught(Ids) {
     alert(id.includes(e))
     alert(d.getElementById(e).hasChildNodes())
     if(!(id.includes(e))){
-      alert("id wla")
+      
       continue;
     }
     if (!(d.getElementById(e).hasChildNodes()))
     {
-      alert("elem wla")
+      
       continue;
     }
     let src = d.getElementById(e).children[0].src
-    alert(src)
-    alert(src[29])
-    alert(prev_block.image[29])
+    
     let newSrc = src.split("/")
     let newPrevImage = prev_block.image.split("/")
     
     if ((newSrc[newSrc.length-1][0]) === (newPrevImage[newPrevImage.length-1][0]) ) continue;
     
     let block = document.getElementById(e);
-    alert(block)
+    
     let span = document.createElement("span")
-    alert(span)
+    
     //console.log(src)
     span.id = e;
     //console.log(prev_block.img_inf)
@@ -1028,7 +1026,7 @@ function PeiceCaught(Ids) {
     // Passing Queens Ids
    // console.log("run")
     if(((block.children[0].classList[1]).slice(1,))==="queen")
-      alert("kuch hai")
+      
     Queen_Catched.id=block.id
     // Passing Here
     span.addEventListener("click",()=>EliminatePeice(block,prev_block.image))
