@@ -993,6 +993,8 @@ function PeiceCaught(Ids) {
   for (let i = 0; i < Ids.length; ++i) {
     console.log(i)
     let e = Ids[i]
+    console.log(id.includes(e))
+    console.log(d.getElementById(e).hasChildNodes())
     if(!id.includes(e)) continue;
     if (!d.getElementById(e).hasChildNodes()) continue;
     let src = d.getElementById(e).children[0].src
