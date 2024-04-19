@@ -1006,6 +1006,8 @@ function PeiceCaught(Ids) {
     }
     let src = d.getElementById(e).children[0].src
     alert(src)
+    alert(src[29])
+    alert(prev_block.image[29])
     if (src[29] == prev_block.image[29])
     {
       alert("src wla")
