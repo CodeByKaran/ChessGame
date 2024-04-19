@@ -1008,11 +1008,11 @@ function PeiceCaught(Ids) {
     alert(src)
     alert(src[29])
     alert(prev_block.image[29])
-    if (src[29] == prev_block.image[29])
-    {
-      alert("src wla")
-      continue
-    };
+    let newSrc = src.split("/")
+    let newPrevImage = prev_block.image.split("/")
+    
+    if ((newSrc[newSrc.length-1][0]) === (newPrevImage[newPrevImage.length-1][0]) ) continue;
+    
     let block = document.getElementById(e);
     alert(block)
     let span = document.createElement("span")
